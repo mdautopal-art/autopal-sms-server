@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: autopal-sms-server
+    env: node
+    buildCommand: npm install
+    startCommand: node sms_server.js
+    plan: free
+    envVars:
+      - key: AT_USERNAME
+        sync: false
+      - key: AT_API_KEY
+        sync: false
+      - key: API_SECRET_KEY
+        sync: false
